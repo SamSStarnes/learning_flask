@@ -16,6 +16,11 @@ def mike():
     sum = n1 + n2
     return str(sum)
 
+@app.route("/about", methods=["GET", "POST"])
+def about():
+    return render_template(
+        "about.html", pageTitle="Web form template", friends=friends_dict
+    )
 
 if __name__ == "__main__":
     app.run(
